@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 50px 150px;
+  background-color: #424242;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header h1 a {
+  width: 117px;
+  height: 117px;
+  display: block;
+  background-image: url("../assets/BMICLogo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header .form-group {
+  margin-bottom: 10px;
+}
+
+.header .form-group label {
+  color: #FFD366;
+  display: block;
+}
+
+.header .form-group input {
+  width: 150px;
+  padding: 5px;
+  border: 2px solid #FFD366;
+  border-radius: 5px;
+  background-color: #595959;
+  color: white;
+  font-size: 18px;
+}
+
+.header .btn {
+  width: 120px;
+  height: 120px;
+  border-color: white;
+  border-radius: 50%;
+  background-color: #FFD366;
+  font-size: 24px;
+  color: #424242;
+  cursor: pointer;
+}
+
+.header .btn:hover {
+  background-color: #ffc942;
+}
+
+.header .btn:active {
+  background-color: #fab80f;
+}
+
+.content {
+  padding: 50px 150px;
+  min-height: calc(100vh - (234px + 90px));
+  background-color: #e4e3e3;
+}
+
+.content h2 {
+  text-align: center;
+  color: #424242;
+  font-size: 24px;
+}
+
+.content .list {
+  margin: 50px 0;
+}
+
+.content .list li {
+  display: block;
+  padding: 19px;
+  background-color: white;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.content .list li h3 {
+  width: 100%;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 350;
+  text-align: center;
+}
+
+.content .list li .itemName {
+  font-size: 14px;
+}
+
+.content .list li .itemValue {
+  font-size: 24px;
+}
+
+.content .list li .date {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+.footer {
+  padding: 12.5px;
+  background-color: #FFD366;
+}
+
+.footer div {
+  width: 55px;
+  height: 55px;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}

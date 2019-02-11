@@ -1,0 +1,333 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 50px 150px;
+  background-color: #424242;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  @include ipad() {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+  }
+  h1 {
+    @include ipad() {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    a {
+      width: 117px;
+      height: 117px;
+      display: block;
+      background-image: url("../assets/BMICLogo.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  form {
+    @include ipad() {
+      display: inline-block;
+      margin-left: 100px;
+    }
+    @media(max-width:660px) {
+      display: block;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 10px;
+      @media(max-width: 660px) {
+        margin-bottom: 30px;
+      }
+      label {
+        color: #FFD366;
+        display: block;
+      }
+      input {
+        width: 150px;
+        padding: 5px;
+        border: 2px solid #FFD366;
+        border-radius: 5px;
+        background-color: rgb(89, 89, 89);
+        color: white;
+        font-size: 18px;
+        @include ipad() {
+          width: 300px;
+        }
+        @media(max-width:660px) {
+          width: 80%;
+        }
+      }
+    }
+  }
+  .btn {
+    width: 120px;
+    height: 120px;
+    border-color: white;
+    border-radius: 50%;
+    background-color: #FFD366;
+    font-size: 24px;
+    color: #424242;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(255, 201, 66);
+    }
+    &:active {
+      background-color: rgb(250, 184, 15);
+    }
+    @include ipad() {
+      margin-bottom: 80px;
+      margin-left: 40px;
+    }
+    @media(max-width:660px) {
+      display: block;
+      margin: 10px auto;
+    }
+  }
+  .outcome-container {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include ipad() {
+      margin-top: -80px;
+    }
+    @media(max-width:660px) {
+      margin-top: 0;
+    }
+    .outer-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: rgb(255, 201, 66);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .inner-circle {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: #424242;
+        text-align: center;
+        p {
+          margin-top: 45px;
+          font-size: 36px;
+          margin-bottom: 0;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+      .remove-border {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #424242;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+      }
+      .small-circle {
+        border-radius: 50%;
+        background-color: rgb(255, 201, 66);
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .statusList {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    background-color: white;
+    padding: 5px;
+    @include ipad() {
+      position: static;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .referBar {
+      display: inline-block;
+      width: 30px;
+      height: 5px;
+      margin-right: 5px;
+    }
+    .referBar-blue {
+      background-color: rgb(0, 157, 255);
+    }
+    .referBar-green {
+      background-color: rgb(45, 159, 35);
+    }
+    .referBar-orange {
+      background-color: orange;
+    }
+    .referBar-red {
+      background-color: red;
+    }
+    .refer-blue {
+      color: rgb(0, 157, 255);
+    }
+    .refer-green {
+      color: rgb(45, 159, 35);
+    }
+    .refer-orange {
+      color: orange;
+    }
+    .refer-red {
+      color: red;
+    }
+  }
+}
+
+.content {
+  padding: 50px 100px;
+  min-height: calc(100vh - (456px + 80px));
+  background-color: rgb(228, 227, 227);
+  position: relative;
+  @include ipad() {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  h2 {
+    text-align: center;
+    color: #424242;
+    font-size: 24px;
+    @include ipad() {
+      font-size: 36px;
+    }
+  }
+  .btnRemoveAll {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 20px;
+    padding: 3px;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px 4px 5px gray;
+    }
+    @include ipad() {
+      font-size: 14px;
+    }
+  }
+  .list {
+    margin: 30px 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 19px;
+      background-color: white;
+      margin-bottom: 20px;
+      position: relative;
+      &:hover {
+        box-shadow: 1px 5px 5px gray;
+      }
+      @include ipad() {
+        display: block;
+      }
+      h3 {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 350;
+        @include ipad() {
+          width: 100%;
+          text-align: center;
+          border-bottom: 2px dashed rgb(179, 178, 178);
+          margin: 10px;
+          padding-bottom: 10px;
+        }
+      }
+      .itemName {
+        font-size: 14px;
+      }
+      .itemValue {
+        font-size: 24px;
+      }
+      .date {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        color: rgb(131, 130, 129);
+      }
+      .btnRemove {
+        position: absolute;
+        top: 30px;
+        left: -80px;
+        width: 50px;
+        color: red;
+        border: 1px solid rgb(222, 7, 7);
+        border-radius: 5px;
+        font-size: 14px;
+        padding-top: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(238, 236, 236);
+          color: red;
+        }
+        &:active {
+          background-color: red;
+          color: white;
+        }
+        @include ipad() {
+          left: auto;
+          right: 15px;
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 12.5px;
+  background-color: #FFD366;
+  div {
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  p {
+    padding-top: 20px;
+    text-align: center;
+  }
+}
