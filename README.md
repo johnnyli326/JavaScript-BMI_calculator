@@ -1,7 +1,7 @@
 # JavaScript-BMI_calculator
 
 ## DEMO
-[BMI計算機](https://johnnyli326.github.io/Javascript-Fun_In_Taipei/)
+[BMI計算機](https://johnnyli326.github.io/JavaScript-BMI_calculator/)
 
 ## Development tool
 Vitual Studio Code
